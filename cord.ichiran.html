@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="Shuichi YUASA">
+    <meta name="description" content="大学の授業で学んだHTML5の主要タグ一覧と、Macの効率化ショートカットキーを網羅した総合学習リファレンスサイトです。">
+    <meta name="keywords" content="html, css, javascript, デジタルリテラシー, ショートカット">
+
+    <title>HTMLタグ解説＆Macショートカット網羅集</title>
+
+    <!-- パスを kadai3 に変更 -->
+    <link rel="stylesheet" href="/cord.ichiran.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>大学生のための情報・デジタルリテラシー：総合学習ナビ</h1>
+        <p>〜 第2週から第5週までのすべての学習内容とPC操作高速化マニュアル 〜</p>
+        <nav>
+            <a href="#html-basics">HTML基本構造</a> |
+            <a href="#html-media">表とメディア</a> |
+            <a href="#mac-basics">Mac基本操作</a> |
+            <a href="#mac-advanced">応用・VS Code技</a> |
+            <a href="#past-lessons">過去の授業リンク</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <section id="html-basics">
+            <h2>第1章 HTMLの基本構造とメタデータの解説</h2>
+            <p>Webページの骨組みを作るための必須タグと、ブラウザや検索エンジンに裏設定を伝えるメタ属性のまとめです。</p>
+
+            <table>
+                <caption>基本構造・メタ属性タグ一覧</caption>
+                <tr>
+                    <th>タグ・属性名</th>
+                    <th>役割と重要な仕様・記述ルール</th>
+                </tr>
+                <tr>
+                    <th>&lt;!DOCTYPE html&gt;</th>
+                    <td>ドキュメントタイプ宣言。このファイルが最新の「HTML5」で書かれていることをブラウザに宣言する。</td>
+                </tr>
+                <tr>
+                    <th>&lt;html lang="ja"&gt;</th>
+                    <td>すべてのHTML要素の親となるルートタグ。lang="ja"でページの主言語が「日本語」だと指定する。</td>
+                </tr>
+                <tr>
+                    <th>&lt;head&gt;</th>
+                    <td>画面には表示されない、文字コードやタイトル、検索キーワードなどの「ページの付加情報」を記述する場所。</td>
+                </tr>
+                <tr>
+                    <th>&lt;meta charset="UTF-8"&gt;</th>
+                    <td>ファイルの文字コードを指定する。<strong>「最初の1,024バイト以内に記述しなければならない」</strong>という厳格なルールがある。</td>
+                </tr>
+                <tr>
+                    <th>&lt;meta name="author"&gt;</th>
+                    <td>ページの制作者（作成者）の名前を指定する属性。</td>
+                </tr>
+                <tr>
+                    <th>&lt;meta name="keywords"&gt;</th>
+                    <td>ページ内容を表すキーワードを3〜5つ程度指定し、ブラウザにサイトのテーマを伝える。</td>
+                </tr>
+                <tr>
+                    <th>&lt;meta name="description"&gt;</th>
+                    <td>ページ全体の要約文（説明文）を記述する。検索エンジンの検索結果一覧の解説文として使われる。</td>
+                </tr>
+                <tr>
+                    <th>&lt;title&gt;</th>
+                    <td>ページのタイトル。ブラウザの「タブ名」や、お気に入りに登録したときの名前として使われる。</td>
+                </tr>
+                <tr>
+                    <th>&lt;body&gt;</th>
+                    <td>実際にブラウザの画面上に表示される、すべてのコンテンツ（文章や画像など）を記述する場所。</td>
+                </tr>
+                <tr>
+                    <th>&lt;header&gt;</th>
+                    <td>サイト共通のヘッダー情報（サイトタイトルやナビゲーションリンクなど）を囲む箱。</td>
+                </tr>
+                <tr>
+                    <th>&lt;nav&gt;</th>
+                    <td>他のページへのリンクや、ページ内リンク（メニュー）をまとめたもの。</td>
+                </tr>
+                <tr>
+                    <th>&lt;main&gt;</th>
+                    <td>ページ内のメインコンテンツ（主要な中身）を囲むためのタグ。1ページに1つだけ配置する。</td>
+                </tr>
+                <tr>
+                    <th>&lt;section&gt;</th>
+                    <td>文書の「章」や「節」などの意味のある大きなまとまり（グループ）を作る。</td>
+                </tr>
+                <tr>
+                    <th>&lt;p&gt;</th>
+                    <td>パラグラフ（段落）。一般的な文章を記述するときに最もよく使う。</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="html-media">
+            <h2>第2章 表・箇条書き・メディア埋め込みの高度な解説</h2>
+            <p>画像ファイル形式の特徴や、動画の複数形式（フォールバック）に関する詳細情報です。</p>
+
+            <section>
+                <h3>第1節 画像ファイル形式（フォーマット）の特徴比較</h3>
+                <!-- 第4週の授業（index4.html）-->
+                <p>各種形式のメリット・デメリットを整理した用語集です。</p>
+                <dl>
+                    <dt><strong>png（ピング、ピン）</strong></dt>
+                    <dd>透明処理（背景透過）が使えるのが最大の特徴。可逆圧縮方式なので、画質を変更しても元に戻すことができるが、jpgと比べるとファイルサイズが大きくなる。</dd>
+
+                    <dt><strong>jpeg（ジェイペグ）</strong></dt>
+                    <dd>一般的に最も使われている画像方式。圧縮率に優れる。非可逆圧縮タイプなので、一度画質を変更して保存すると元の画質には戻せない。色数の多い写真などに最適。</dd>
+
+                    <dt><strong>gif（ジフ、ギフ）</strong></dt>
+                    <dd>最大で256色まで扱える。ぱらぱら漫画のようなアニメーション表現ができるのが最大の特徴。</dd>
+
+                    <dt><strong>webp（ウェッピー）</strong></dt>
+                    <dd>Googleが開発した最新の画像形式。高画質な状態を保ったまま、jpgやpngよりもさらにファイルサイズを小さく軽量化できる。</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3>第2節 箇条書きによるデータの階層構造（入れ子リスト）</h3>
+                <!-- 第3週の授業（index3.html） -->
+                <p>順序のないリスト（ul）と順序のあるリスト（ol）を組み合わせた高度な入れ子（ネスト）構造の再現です。</p>
+                <ul>
+                    <li>
+                        赤身の魚
+                        <ul>
+                            <li>マグロ</li>
+                            <li>
+                                ブリ（成長によって名前が変わる出世魚）
+                                <ol>
+                                    <li>ワカシ</li>
+                                    <li>ハマチ</li>
+                                    <li>ワラサ</li>
+                                    <li>ブリ</li>
+                                </ol>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>白身の魚</li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>第3節 動画のマルチ形式埋め込み（フォールバック構造）</h3>
+                <!-- 第4週の応用コード -->
+                <p>ブラウザの環境（種類）に合わせて自動で再生可能なファイル形式を上から順に選択させる、sourceタグです。どの形式にも対応していない古いブラウザ向けに、内側に注意文（pタグ）を挟むルールになっています。
+                </p>
+            </section>
+        </section>
+
+        <section id="mac-basics">
+            <h2>第3章 Macのパソコン効率化ショートカットキー：基本操作編</h2>
+            <p>大学でのレポート作成や普段のネットサーフィン、固定概念にとらわれずすべてのPC作業が劇的に速くなる、基本中の基本キーの一覧です。</p>
+
+            <table>
+                <caption>基本ショートカット一覧</caption>
+                <tr>
+                    <th>キー操作</th>
+                    <th>機能・役割の詳細な説明</th>
+                </tr>
+                <tr>
+                    <td><strong>Command + C</strong></td>
+                    <td>選択した文字やファイル、画像を一時的にパソコンに「コピー（複製）」する。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + V</strong></td>
+                    <td>コピーまたは切り取った内容を、カーソルがある位置に「貼り付け（ペースト）」する。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + X</strong></td>
+                    <td>選択した文字をその場から消去（カット）しつつ、貼り付け用に記憶する。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + Z</strong></td>
+                    <td>操作を間違えたときや、文字を消しすぎたときに「1つ前の状態に戻す（取り消し）」。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + Shift + Z</strong></td>
+                    <td>Command+Zで戻しすぎた操作を「もう一度やり直す（進める）」。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + A</strong></td>
+                    <td>開いているページやファイル内の文字・データを「すべて選択」する。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + S</strong></td>
+                    <td>現在編集中のファイルを「上書き保存（セーブ）」する。VS Codeではデータ消失を防ぐため必須の癖。</td>
+                </tr>
+                <tr>
+                    <td><strong>Command + F</strong></td>
+                    <td>ページ内やファイル内から、特定の文字を探し出す「検索バー」を画面上に起動する。</td>
+                </tr>
+            </table>
+        </section>
+
+        <section id="mac-advanced">
+            <h2>第4章 Macのパソコン効率化ショートカットキー：アプリ・VS Code編</h2>
+            <p>ブラウザのタブ管理や画面キャプチャ、そしてVS Codeでのプログラミング速度をハッカーのように高める応用キーです。</p>
+
+            <section>
+                <h3>第1節 ブラウザ・ウィンドウ管理リスト</h3>
+                <ul>
+                    <li>ブラウザのタブ操作
+                        <ul>
+                            <li><strong>Command + T</strong> ： 新しいタブを瞬時に開く</li>
+                            <li><strong>Command + W</strong> ： 今見ているタブ（またはウィンドウ）を即座に閉じる</li>
+                            <li><strong>Command + Shift + T</strong> ： 間違えて閉じてしまったタブを履歴から大復活させる</li>
+                        </ul>
+                    </li>
+                    <li>アプリケーションの管理
+                        <ul>
+                            <li><strong>Command + Q</strong> ： 今使っているアプリ（VS Codeなど）そのものを完全に終了する</li>
+                            <li><strong>Command + Tab</strong> ： マウスを使わずに、起動中のアプリを一瞬で切り替える</li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+
+            <section>
+                <h3>第2節 画面の撮影（スクリーンショット）の分類</h3>
+                <p>レポート作成の証拠画面や、提出用の画面を撮影するためのMacの標準機能です。</p>
+                <dl>
+                    <dt>Command + Shift + 3</dt>
+                    <dd>画面「全体」をそのまま撮影して、デスクトップに画像として保存する。</dd>
+
+                    <dt>Command + Shift + 4</dt>
+                    <dd>マウスカーソルが十字になり、自分で「ドラッグして囲んだ部分だけ」を部分的に狙って撮影する。</dd>
+                </dl>
+            </section>
+
+            <section>
+                <h3>第3節 VS Code（エディタ）専用の爆速コマンド</h3>
+                <p>マウスで行を選択したりコピーしたりする手間を省き、キーボードだけでコードを書き換えたり、乱れた配置を一瞬で整えるためのテクニックです。</p>
+                <ol>
+                    <li><strong>Option + Shift + F</strong> ： インデント（字下げ）やコードのズレを綺麗に自動で整列（フォーマット）する。</li>
+                    <li><strong>Command + /</strong> ： 選択した行を一発で「コメントアウト（一時的なプログラムの無効化・メモ化）」にする。</li>
+                    <li><strong>Option + ↑ / ↓</strong> ： 文字を選択せず、今カーソルがある行を「丸ごと上下に移動」させる。</li>
+                    <li><strong>Shift + Option + ↑ / ↓</strong> ： 今カーソルがある行を、その上下に「そっくりそのまま複製（コピー）」する。</li>
+                    <li><strong>Command + X （文字選択なし）</strong> ： カーソルがある「行を丸ごと1行カット（削除）」する。</li>
+                </ol>
+            </section>
+        </section>
+
+        <section id="past-lessons">
+            <h2>第5章 過去の提出課題・授業ファイルへのリンク集</h2>
+            <p><code>../</code>（1つ上の階層のフォルダに戻る）という、同一サーバー上の相対パス移動をフル活用したリンク集です。Webサイトを相互に行き来できるように設計しています。</p>
+            <ul>
+                <li><a href="../lesson2/index2.html" target="_self">第2回授業：HTMLの基本構造（同じタブで開く）</a></li>
+                <li><a href="../lesson3/index3.html" target="_self">第3回授業：表と箇条書き（同じタブで開く）</a></li>
+                <li><a href="../lesson4/index4.html" target="_self">第4回授業：画像と動画の埋め込み（同じタブで開く）</a></li>
+                <li><a href="../lesson5/index5.html" target="_self">第5回授業：ハイパーリンクの基礎（同じタブで開く）</a></li>
+
+                <li><a href="/disney.html" target="_blank">📄 提出課題：夢と魔法のディズニーワールドHPを開く（別タブで開く）</a></li>
+                <li><a href="/index.html" target="_blank">📄 提出課題：生命哲学研究会とは？HPを開く（別タブで開く）</a></li>
+            </ul>
+        </section>
+
+        <!-- JSで動かすためのidを追加 -->
+        <p><a href="#" id="back-to-top">ページのトップへ戻る</a></p>
+
+    </main>
+
+    <footer>
+        <p>情報・デジタルリテラシー 成果物作成課題：総合学習リファレンスサイト</p>
+        <p>Copyright &copy; Shuichi YUASA, All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="/cord.ichiran.js"></script>
+</body>
+
+</html>
