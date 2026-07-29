@@ -1,0 +1,68 @@
+@charset "utf-8";
+
+* {
+    font-family: sans-serif, "メイリオ";
+}
+
+body {
+    background-color: #f4f6f9;
+    color: #1e293b;
+    line-height: 1.6rem;
+}
+
+header {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 4px;
+}
+
+header h1 {
+    background-color: #1e293b;
+    color: #38bdf8;
+}
+
+nav a {
+    color: #ffffff;
+    margin-right: 8px;
+    padding: 4px 8px;
+    border: 1px solid #38bdf8;
+    border-radius: 4px;
+    display: inline-block;
+    text-decoration: none; /* リンクの下線を消す */
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 24px;
+    margin-top: 20px;
+}
+
+section {
+    background-color: #ffffff;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+}
+
+code {
+    color: #df1654;
+    background-color: #f1f5f9;
+    padding: 2px;
+}
+
+table {
+    border: 1px solid #000000;
+    border-collapse: collapse; /* 表の隙間を埋める */
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+th {
+    background-color: #f8fafc;
+}
